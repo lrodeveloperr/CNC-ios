@@ -3,12 +3,12 @@ import SwiftUI
 enum ShellConfiguration {
     static let appName = "CNC Repeat Job Bench"
     static let tint = Color(red: 0.071, green: 0.396, blue: 0.659)
-    static let supportEmail = "support@example.com"
+    static let supportEmail = "info@worksbienstudios.com"
 
     static let legal = LegalConfiguration(
         version: "1",
-        privacyURL: URL(string: "https://example.com/#replace-with-privacy-policy")!,
-        termsURL: URL(string: "https://example.com/#replace-with-terms-of-use")!
+        privacyURL: URL(string: "https://lrodeveloperr.github.io/privacy-policy/cnc-repeat-job-bench/privacy/")!,
+        termsURL: URL(string: "https://lrodeveloperr.github.io/privacy-policy/cnc-repeat-job-bench/terms/")!
     )
 
     /// Set to nil when the product does not have a genuine onboarding need.

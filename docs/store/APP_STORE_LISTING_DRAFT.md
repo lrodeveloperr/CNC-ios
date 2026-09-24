@@ -20,7 +20,7 @@
 | No required login or physical CNC connection | Source paths contain no login or machine interface | Source-confirmed for this revision; verify compiled target. |
 | Advertising/tracking | Default `Shell` target excludes the optional `ShellAds` variant; privacy manifest declares no collection/tracking | Release archive must prove that no advertising SDK or other data collector is linked. |
 | English-only workflow | `ShellConfiguration.supportedLanguages` contains system and en; product UI labels are English | Confirm localization on device. |
-| Support and legal links | `ShellConfiguration.swift` still contains example.com and support@example.com | **Release blocker:** publish real pages and wire their URLs/email. |
+| Support and legal links | Public policy repo contains the CNC pages and `ShellConfiguration.swift` points to them | Verify the deployed pages and contact mailbox before release. |
 
 ## App Store fields — en-US
 
@@ -33,10 +33,10 @@
 | Secondary category | Productivity | Optional; verify in App Store Connect |
 | Promotional text | Leave empty for initial listing | — |
 | What's New | Omit for first release | — |
-| Support URL | Proposed: `https://worksbienstudios.com/customerservice` | Route exists in website source; verify live before entry |
-| Privacy URL | **Publish the reviewed app-specific privacy draft first** | Exact URL not assigned |
+| Support URL | `https://lrodeveloperr.github.io/privacy-policy/cnc-repeat-job-bench/support/` | Published source; verify live response |
+| Privacy URL | `https://lrodeveloperr.github.io/privacy-policy/cnc-repeat-job-bench/privacy/` | Published source; verify live response |
 | Marketing URL | Optional; omit until a CNC landing page exists | — |
-| Terms URL | Link to app-specific terms in Settings; include Apple standard EULA in description | Exact app-specific URL not assigned |
+| Terms URL | `https://lrodeveloperr.github.io/privacy-policy/cnc-repeat-job-bench/terms/` | Linked in Settings; standard Apple EULA remains in description |
 
 ### Description
 
@@ -98,7 +98,7 @@ The title keeps the exact CNC repeat-job task. The subtitle adds the first-piece
 | Content rights | Original source/icon and synthetic screenshot data | Verify rights to all icon/art and any sample drawings/photos. |
 | Export compliance | Source `Info.plist` sets `ITSAppUsesNonExemptEncryption=false` | Confirm final archive and answer Apple's actual questions. |
 | Territories | Undecided | Select after evaluating local legal and language obligations; no worldwide claim. |
-| Privacy / support / terms | Pages not yet published; in-app URLs are placeholders | Publish, wire, and verify live pages before creating a listing. |
+| Privacy / support / terms | Pages committed to public legal repository and wired in source | Verify deployed URLs and contact before submission. |
 
 ### Notes for App Review (draft)
 
@@ -113,7 +113,7 @@ No login or physical CNC machine is required. To explore the workflow, open **Se
 | `git diff --check`, localization and commerce-branding scripts | Passed on source import. |
 | Swift 6/Xcode build, engine tests, shell tests, iPhone/iPad UI | Pending Mac runner / developer. |
 | Authentic screenshots and icon at search size | Pending compiled app / design QA. |
-| Live support/legal pages and in-app URL replacements | Pending publisher. |
+| Live support/legal pages and in-app URL replacements | URLs wired in source; deployment and content parity to verify. |
 | App Store Connect subscription products, age rating, territories, privacy and pricing | Pending publisher. |
 | Legal review of privacy, terms and availability | Pending accountable reviewer. |
 

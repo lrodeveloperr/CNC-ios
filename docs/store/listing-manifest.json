@@ -33,8 +33,8 @@
     "app_store_connect_snapshot_date": "2026-09-24",
     "official_sources_reviewed_on": "2026-09-24",
     "unresolved_conflicts": [
-      "Legal publisher and live customer-service mailbox must be confirmed.",
-      "Final Xcode archive, App Store Connect products, live policy URLs, privacy disclosures, and authentic screenshots are pending."
+      "Published policy pages require live deployment/content verification.",
+      "Final Xcode archive, App Store Connect products, privacy disclosures, and authentic screenshots are pending."
     ]
   },
   "aso_context": {
@@ -78,8 +78,8 @@
         "production count",
         "shop floor"
       ],
-      "support_url": "",
-      "privacy_url": "",
+      "support_url": "https://lrodeveloperr.github.io/privacy-policy/cnc-repeat-job-bench/support/",
+      "privacy_url": "https://lrodeveloperr.github.io/privacy-policy/cnc-repeat-job-bench/privacy/",
       "marketing_url": "",
       "whats_new": "",
       "native_language_reviewed": true,
@@ -227,7 +227,7 @@
     "paid_value_and_location": "Pro opens approvals and new runs for additional families; purchase screen and Settings show the offer."
   },
   "privacy": {
-    "policy_url": "",
+    "policy_url": "https://lrodeveloperr.github.io/privacy-policy/cnc-repeat-job-bench/privacy/",
     "data_inventory_complete": false,
     "third_party_sdks_included": false,
     "app_privacy_answers_match_final_build": false,
