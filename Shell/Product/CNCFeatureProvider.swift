@@ -177,7 +177,7 @@ private struct DraftSetupForm: View {
     @State private var revision = ""
     @State private var notes = ""
     @State private var references: [Checkpoint: String] = [:]
-    @State private var dimensions: [Dimension] = []
+    @State private var dimensions: [CNCRepeatJobEngine.Dimension] = []
     @State private var code = "D1"
     @State private var nominal = ""
     @State private var minus = ""
@@ -215,7 +215,7 @@ private struct DraftSetupForm: View {
                 TextField("Plus tolerance", text: $plus).keyboardType(.decimalPad)
                 TextField("Unit", text: $unit)
                 Button("Add dimension") {
-                    dimensions.append(Dimension(code: code, nominal: nominal, minus: minus, plus: plus, unit: unit))
+                    dimensions.append(CNCRepeatJobEngine.Dimension(code: code, nominal: nominal, minus: minus, plus: plus, unit: unit))
                     code = ""; nominal = ""; minus = ""; plus = ""
                 }.disabled(code.isEmpty || nominal.isEmpty || minus.isEmpty || plus.isEmpty || unit.isEmpty || dimensions.count >= 100)
             }
@@ -647,7 +647,7 @@ private struct RunCanvas: View {
         }
     }
 
-    private func moreActions(_ run: Run) -> some View {
+    @ViewBuilder private func moreActions(_ run: Run) -> some View {
         Section("Run exceptions") {
             TextField("Issue detail", text: $issueDetail)
             Button("Open issue and hold") { Task { await bench.perform(.issue(runID: run.id, detail: issueDetail)) } }
