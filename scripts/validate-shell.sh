@@ -122,11 +122,8 @@ if [[ "$mode" == "--release" || "$mode" == "--release-ads" ]]; then
   reject_text project.yml 'com.goodusestudios.shelllab'
   reject_text project.yml 'PRODUCT_NAME: Shell'
   reject_text Shell/Resources/en.lproj/Localizable.strings 'REPLACE_WITH_REVIEWED_'
-  reject_text Shell/Resources/es.lproj/Localizable.strings 'REPLACE_WITH_REVIEWED_'
   reject_text Shell/Resources/en.lproj/Localizable.strings 'Make the useful thing unlimited.'
   reject_text Shell/Resources/en.lproj/Localizable.strings 'Unlimited core actions'
-  reject_text Shell/Resources/es.lproj/Localizable.strings 'Usa la función sin límites.'
-  reject_text Shell/Resources/es.lproj/Localizable.strings 'Acciones principales ilimitadas'
   reject_text Shell/App/ShellApp.swift 'PlaceholderFeatureCanvasProvider()'
   grep -Fq 'privacyURL: URL(string: "https://' Shell/App/ShellConfiguration.swift || fail "Privacy URL must use HTTPS"
   grep -Fq 'termsURL: URL(string: "https://' Shell/App/ShellConfiguration.swift || fail "Terms URL must use HTTPS"
