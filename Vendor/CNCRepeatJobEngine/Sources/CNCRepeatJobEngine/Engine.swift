@@ -281,7 +281,7 @@ public struct BenchEngine: Sendable {
             guard run.firstPiece.observations[code] == nil else { throw BenchError.blocked("This dimension has a reading. Use repeatMeasurement with a reason.") }
             let v = try decimal(value), nominal = try decimal(d.nominal), lower = nominal - (try decimal(d.minus)), upper = nominal + (try decimal(d.plus))
             let pass = v >= lower && v <= upper
-            let observation = Observation(dimension: code, value: value, withinTolerance: pass, actor: actor, at: at)
+            let observation = MeasurementObservation(dimension: code, value: value, withinTolerance: pass, actor: actor, at: at)
             run.firstPiece.observations[code] = observation; run.measurementHistory.append(observation)
             state.runs[runID] = run
             addAudit(&state, id, at, actor, "measure", runID, "\(code): \(value); within tolerance: \(pass)")
@@ -295,7 +295,7 @@ public struct BenchEngine: Sendable {
             let lower = nominal - (try decimal(d.minus))
             let upper = nominal + (try decimal(d.plus))
             let pass = v >= lower && v <= upper
-            let observation = Observation(dimension: code, value: value, withinTolerance: pass, actor: actor, at: at)
+            let observation = MeasurementObservation(dimension: code, value: value, withinTolerance: pass, actor: actor, at: at)
             run.firstPiece.observations[code] = observation; run.measurementHistory.append(observation)
             state.runs[runID] = run
             addAudit(&state, id, at, actor, "repeatMeasurement", runID, "\(code): \(value); reason: \(why); within tolerance: \(pass)")
@@ -365,7 +365,7 @@ public struct BenchEngine: Sendable {
             let lower = nominal - (try decimal(d.minus))
             let upper = nominal + (try decimal(d.plus))
             let pass = reading >= lower && reading <= upper
-            let observation = Observation(dimension: code, value: value, withinTolerance: pass, actor: actor, at: at)
+            let observation = MeasurementObservation(dimension: code, value: value, withinTolerance: pass, actor: actor, at: at)
             inspection.observations[code] = observation
             run.measurementHistory.append(observation)
             run.pendingInspection = inspection
