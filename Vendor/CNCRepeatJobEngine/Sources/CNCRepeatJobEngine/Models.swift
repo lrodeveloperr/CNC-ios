@@ -67,7 +67,7 @@ public struct Confirmation: Codable, Equatable, Sendable {
     public var at: Date
     public var matches: Bool
 }
-public struct Observation: Codable, Equatable, Sendable {
+public struct MeasurementObservation: Codable, Equatable, Sendable {
     public var dimension: String
     public var value: String
     public var withinTolerance: Bool
@@ -85,14 +85,14 @@ public struct InProcessInspection: Codable, Equatable, Sendable {
     public var trigger: String
     public var dueGood: Int
     public var at: Date
-    public var observations: [String: Observation]
+    public var observations: [String: MeasurementObservation]
     public var decision: Decision?
     public var reviewer: String?
     public var reviewedAt: Date?
     public var reason: String
 }
 public struct FirstPiece: Codable, Equatable, Sendable {
-    public var observations: [String: Observation]
+    public var observations: [String: MeasurementObservation]
     public var decision: Decision?
     public var reviewer: String?
     public var reviewedAt: Date?
@@ -202,7 +202,7 @@ public struct Run: Codable, Equatable, Sendable {
     public var deviations: [Checkpoint: Deviation]
     public var firstPiece: FirstPiece
     public var firstPieceHistory: [FirstPiece]
-    public var measurementHistory: [Observation]
+    public var measurementHistory: [MeasurementObservation]
     public var counts: [CountEntry]
     public var changes: [Change]
     public var issues: [Issue]
