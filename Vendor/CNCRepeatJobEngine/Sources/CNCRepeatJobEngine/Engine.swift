@@ -292,7 +292,9 @@ public struct BenchEngine: Sendable {
             let why = try required(reason, "Repeat-measurement reason")
             guard let setup = state.setups[run.setupID], let d = setup.dimensions.first(where: { $0.code == code }) else { throw BenchError.missing("Dimension not found.") }
             let v = try decimal(value), nominal = try decimal(d.nominal)
-            let pass = v >= nominal - (try decimal(d.minus)) && v <= nominal + (try decimal(d.plus))
+            let lower = nominal - (try decimal(d.minus))
+            let upper = nominal + (try decimal(d.plus))
+            let pass = v >= lower && v <= upper
             let observation = Observation(dimension: code, value: value, withinTolerance: pass, actor: actor, at: at)
             run.firstPiece.observations[code] = observation; run.measurementHistory.append(observation)
             state.runs[runID] = run
@@ -360,7 +362,9 @@ public struct BenchEngine: Sendable {
             if inspection.observations[code] != nil { _ = try required(repeatReason ?? "", "Repeat measurement reason") }
             else if repeatReason != nil { throw BenchError.invalid("A repeat reason is only valid after an initial reading.") }
             let reading = try decimal(value), nominal = try decimal(d.nominal)
-            let pass = reading >= nominal - (try decimal(d.minus)) && reading <= nominal + (try decimal(d.plus))
+            let lower = nominal - (try decimal(d.minus))
+            let upper = nominal + (try decimal(d.plus))
+            let pass = reading >= lower && reading <= upper
             let observation = Observation(dimension: code, value: value, withinTolerance: pass, actor: actor, at: at)
             inspection.observations[code] = observation
             run.measurementHistory.append(observation)
@@ -641,8 +645,9 @@ public struct BenchEngine: Sendable {
                     guard let dimension = setup.dimensions.first(where: { $0.code == code }),
                           observation.dimension == code else { throw BenchError.invalid("Unknown inspection dimension.") }
                     let value = try decimal(observation.value), nominal = try decimal(dimension.nominal)
-                    guard observation.withinTolerance == (value >= nominal - (try decimal(dimension.minus)) &&
-                          value <= nominal + (try decimal(dimension.plus))) else {
+                    let lower = nominal - (try decimal(dimension.minus))
+                    let upper = nominal + (try decimal(dimension.plus))
+                    guard observation.withinTolerance == (value >= lower && value <= upper) else {
                         throw BenchError.invalid("Inspection measurement does not match its tolerance.")
                     }
                 }
@@ -711,8 +716,10 @@ public struct BenchEngine: Sendable {
             for (code, observation) in run.firstPiece.observations {
                 guard let dimension = setup.dimensions.first(where: { $0.code == code }) else { throw BenchError.invalid("Unknown measured dimension.") }
                 let value = try decimal(observation.value), nominal = try decimal(dimension.nominal)
+                let lower = nominal - (try decimal(dimension.minus))
+                let upper = nominal + (try decimal(dimension.plus))
                 guard observation.dimension == code,
-                      observation.withinTolerance == (value >= nominal - (try decimal(dimension.minus)) && value <= nominal + (try decimal(dimension.plus))) else {
+                      observation.withinTolerance == (value >= lower && value <= upper) else {
                     throw BenchError.invalid("Measurement result does not match the approved tolerances.")
                 }
             }
