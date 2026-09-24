@@ -65,6 +65,8 @@ targets:
         GENERATE_INFOPLIST_FILE: YES
         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/CNCRepeatJobBench.app/CNCRepeatJobBench"
         BUNDLE_LOADER: "$(TEST_HOST)"
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/CNCRepeatJobBench.app/CNCRepeatJobBench"
+        BUNDLE_LOADER: "$(TEST_HOST)"
   ShellUITests:
     type: bundle.ui-testing
     platform: iOS
