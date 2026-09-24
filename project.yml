@@ -20,6 +20,7 @@ targetTemplates:
         excludes:
           - Resources/Info.plist
           - Resources/Info-Ads.plist
+          - Resources/es.lproj
     settings:
       base:
         PRODUCT_NAME: CNCRepeatJobBench

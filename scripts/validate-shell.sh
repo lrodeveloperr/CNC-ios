@@ -18,7 +18,13 @@ for path in project.yml AGENTS.md docs/APPLE_STORE_COMPLIANCE.md docs/DERIVED_AP
   require_file "$path"
 done
 
-if rg -n 'import (Flutter|React|ReactNative)|FlutterViewController|RCTRootView' Shell; then
+if command -v rg >/dev/null 2>&1; then
+  cross_platform_hits="$(rg -n 'import (Flutter|React|ReactNative)|FlutterViewController|RCTRootView' Shell || true)"
+else
+  cross_platform_hits="$(grep -R -n -E 'import (Flutter|React|ReactNative)|FlutterViewController|RCTRootView' Shell || true)"
+fi
+if [[ -n "$cross_platform_hits" ]]; then
+  printf '%s\n' "$cross_platform_hits"
   fail "Cross-platform runtime detected; this shell must remain native Swift/SwiftUI"
 fi
 
