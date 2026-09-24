@@ -229,8 +229,8 @@ public actor BenchRepository {
         let descriptor = lockURL.path.withCString { Darwin.open($0, O_CREAT | O_RDWR, mode_t(0o600)) }
         guard descriptor >= 0 else { throw BenchError.conflict("Cannot open the database lock.") }
         defer { _ = Darwin.close(descriptor) }
-        guard Darwin.flock(descriptor, LOCK_EX) == 0 else { throw BenchError.conflict("Cannot lock the database.") }
-        defer { _ = Darwin.flock(descriptor, LOCK_UN) }
+        guard Darwin.lockf(descriptor, F_LOCK, 0) == 0 else { throw BenchError.conflict("Cannot lock the database.") }
+        defer { _ = Darwin.lockf(descriptor, F_ULOCK, 0) }
         return try body()
     }
 }
