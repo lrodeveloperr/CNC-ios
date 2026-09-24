@@ -1,5 +1,5 @@
 import XCTest
-@testable import Shell
+@testable import CNCRepeatJobBench
 
 @MainActor
 final class ShellTests: XCTestCase {
