@@ -46,6 +46,8 @@ jobs:
           if [[ -d /Applications/Xcode_26.6.app ]]; then sudo xcode-select -s /Applications/Xcode_26.6.app/Contents/Developer; fi
           command -v xcodegen >/dev/null || brew install xcodegen
           xcodebuild -version
+      - name: Run engine tests
+        run: swift test --package-path Vendor/CNCRepeatJobEngine
       - name: Generate and verify simulator build
         run: |
           scripts/validate-shell.sh --release
