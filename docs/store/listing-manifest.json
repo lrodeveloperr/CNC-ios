@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.0",
+  "mode": "draft",
+  "app": {
+    "platform": "ios",
+    "bundle_id": "com.goodusestudios.cncrepeatjobbench",
+    "version": "1.0",
+    "company_name": "WorksBien Studios Inc.",
+    "release_kind": "new",
+    "primary_category": "Business",
+    "secondary_category": "Productivity",
+    "category_verified_in_current_app_store_connect": false,
+    "secondary_category_verified_in_current_app_store_connect": false,
+    "game_subcategory_decision_verified": false,
+    "supported_devices": [
+      "iphone",
+      "ipad"
+    ],
+    "requires_account": false,
+    "requires_hardware": false
+  },
+  "source_control": {
+    "final_release_build_inspected": false,
+    "signed_archive_inspected": false,
+    "app_store_connect_inspected": false,
+    "public_policies_inspected": false,
+    "official_apple_sources_refreshed": true,
+    "fact_ledger_complete": true,
+    "facts_reconciled": false,
+    "final_build_identifier": "TBD",
+    "evidence_index": "APP_STORE_LISTING_DRAFT.md#fact-ledger",
+    "final_build_reviewed_on": "2026-09-24",
+    "app_store_connect_snapshot_date": "2026-09-24",
+    "official_sources_reviewed_on": "2026-09-24",
+    "unresolved_conflicts": [
+      "Legal publisher and live customer-service mailbox must be confirmed.",
+      "Final Xcode archive, App Store Connect products, live policy URLs, privacy disclosures, and authentic screenshots are pending."
+    ]
+  },
+  "aso_context": {
+    "primary_intent": "Repeat CNC job setup, first-piece review, in-process inspection, run record and handoff on an iPhone.",
+    "observed_search_phrases": [
+      "CNC setup — Setup Vault App Store page, reviewed 2026-09-24",
+      "CNC tool manager — HolderLog App Store page, reviewed 2026-09-24",
+      "shop floor — CNC Flow App Store page, reviewed 2026-09-24"
+    ],
+    "restricted_terms": [
+      "Haas",
+      "Fanuc",
+      "Mazak",
+      "Mastercam"
+    ]
+  },
+  "icon": {
+    "concept": "Engine-stage spindle/cycle symbol in yellow on navy, already in the iOS app icon assets.",
+    "artifact_path": "../../Shell/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+    "small_size_checked": false,
+    "relevant_search_grid_checked": false,
+    "build_asset_matches": false
+  },
+  "locales": [
+    {
+      "locale": "en-US",
+      "name": "CNC Repeat Job Bench",
+      "subtitle": "First-piece & run checks",
+      "promotional_text": "",
+      "promotion_owner": "",
+      "promotion_review_due_on": "",
+      "description": "CNC Repeat Job Bench guides a repeat job from an approved setup through first-piece review, in-process checks and a recorded closeout.\n\nCreate a reference for each part, drawing revision and machine. Record stock, program, fixture, tools, offsets and documents, then enter dimensions and tolerances. At the machine, confirm what you observe before the first-piece measurement.\n\nDuring a run:\n• Record first-piece readings and a named review.\n• Count good, scrap and quarantined parts, with reasoned corrections.\n• Pause at a chosen good-piece interval for inspection or request a manual check.\n• Log process changes and issues, resolve holds and hand work to another operator.\n• Review run history and export a handoff PDF, runs CSV or local JSON backup.\n\nWork records are stored on this device unless you choose to export or share them. No CNC connection or automatic measurement is required.\n\nFree use covers the first two distinct part-and-machine families. Monthly or annual Pro subscriptions allow additional families. Existing runs and records remain accessible when Pro ends; starting a new run for a Pro-only family requires an active subscription. The purchase screen displays the current App Store price and renewal period.\n\nThe app helps document shop work. It does not operate a machine, verify physical measurements, certify parts or replace your shop's safety and quality procedures.\n\nTerms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+      "keywords": [
+        "machinist",
+        "setup",
+        "inspection",
+        "measurement",
+        "handoff",
+        "tolerance",
+        "work order",
+        "production count",
+        "shop floor"
+      ],
+      "support_url": "",
+      "privacy_url": "",
+      "marketing_url": "",
+      "whats_new": "",
+      "native_language_reviewed": true,
+      "ui_language_disclosed_accurately": true,
+      "locale_available_in_app_store_connect": false,
+      "no_stray_language_confirmed": true,
+      "claims_supported": true,
+      "paid_features_disclosed_if_needed": true
+    }
+  ],
+  "screenshot_count_override_reason": "",
+  "required_screenshot_sets": [
+    {
+      "locale": "en-US",
+      "device": "iphone",
+      "expected_count": 3,
+      "accepted_dimensions": [
+        [
+          1290,
+          2796
+        ]
+      ],
+      "dimension_source_url": "https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/"
+    },
+    {
+      "locale": "en-US",
+      "device": "ipad",
+      "expected_count": 3,
+      "accepted_dimensions": [
+        [
+          2048,
+          2732
+        ]
+      ],
+      "dimension_source_url": "https://developer.apple.com/help/app-store-connect/reference/app-information/screenshot-specifications/"
+    }
+  ],
+  "screenshots": [
+    {
+      "locale": "en-US",
+      "device": "iphone",
+      "position": 1,
+      "story_role": "outcome",
+      "caption": "Know where the run stands",
+      "artifact_path": "",
+      "authentic_ui": false,
+      "dimensions_verified_against_current_apple_spec": false,
+      "display_appearance_checked": false,
+      "sample_data_consistent": false,
+      "localized_copy_checked": false,
+      "claims_supported": false,
+      "paid_feature_disclosed_if_needed": false,
+      "no_other_platform_imagery": false,
+      "search_result_legibility_checked": false
+    },
+    {
+      "locale": "en-US",
+      "device": "iphone",
+      "position": 2,
+      "story_role": "path",
+      "caption": "Check the first piece",
+      "artifact_path": "",
+      "authentic_ui": false,
+      "dimensions_verified_against_current_apple_spec": false,
+      "display_appearance_checked": false,
+      "sample_data_consistent": false,
+      "localized_copy_checked": false,
+      "claims_supported": false,
+      "paid_feature_disclosed_if_needed": false,
+      "no_other_platform_imagery": false,
+      "search_result_legibility_checked": false
+    },
+    {
+      "locale": "en-US",
+      "device": "iphone",
+      "position": 3,
+      "story_role": "proof",
+      "caption": "Keep the job record",
+      "artifact_path": "",
+      "authentic_ui": false,
+      "dimensions_verified_against_current_apple_spec": false,
+      "display_appearance_checked": false,
+      "sample_data_consistent": false,
+      "localized_copy_checked": false,
+      "claims_supported": false,
+      "paid_feature_disclosed_if_needed": false,
+      "no_other_platform_imagery": false,
+      "search_result_legibility_checked": false
+    },
+    {
+      "locale": "en-US",
+      "device": "ipad",
+      "position": 1,
+      "story_role": "outcome",
+      "caption": "Know where the run stands",
+      "artifact_path": "",
+      "authentic_ui": false,
+      "dimensions_verified_against_current_apple_spec": false,
+      "display_appearance_checked": false,
+      "sample_data_consistent": false,
+      "localized_copy_checked": false,
+      "claims_supported": false,
+      "paid_feature_disclosed_if_needed": false,
+      "no_other_platform_imagery": false,
+      "search_result_legibility_checked": false
+    },
+    {
+      "locale": "en-US",
+      "device": "ipad",
+      "position": 2,
+      "story_role": "path",
+      "caption": "Check the first piece",
+      "artifact_path": "",
+      "authentic_ui": false,
+      "dimensions_verified_against_current_apple_spec": false,
+      "display_appearance_checked": false,
+      "sample_data_consistent": false,
+      "localized_copy_checked": false,
+      "claims_supported": false,
+      "paid_feature_disclosed_if_needed": false,
+      "no_other_platform_imagery": false,
+      "search_result_legibility_checked": false
+    },
+    {
+      "locale": "en-US",
+      "device": "ipad",
+      "position": 3,
+      "story_role": "proof",
+      "caption": "Keep the job record",
+      "artifact_path": "",
+      "authentic_ui": false,
+      "dimensions_verified_against_current_apple_spec": false,
+      "display_appearance_checked": false,
+      "sample_data_consistent": false,
+      "localized_copy_checked": false,
+      "claims_supported": false,
+      "paid_feature_disclosed_if_needed": false,
+      "no_other_platform_imagery": false,
+      "search_result_legibility_checked": false
+    }
+  ],
+  "visual_disclosure": {
+    "page_clarity_reviewed": false,
+    "free_or_included_value": "First two distinct part-and-machine families.",
+    "paid_value_and_location": "Pro opens approvals and new runs for additional families; purchase screen and Settings show the offer."
+  },
+  "privacy": {
+    "policy_url": "",
+    "data_inventory_complete": false,
+    "third_party_sdks_included": false,
+    "app_privacy_answers_match_final_build": false,
+    "privacy_policy_matches_final_build": false,
+    "privacy_manifest_checked_in_final_archive": false,
+    "required_reason_apis_checked": false,
+    "sdk_signatures_checked": false,
+    "tracking_declaration_accurate": false,
+    "data_deletion_obligations_resolved": false
+  },
+  "monetization": {
+    "models": [
+      "auto_renewable_subscription"
+    ],
+    "products": [],
+    "public_price_and_offer_context_reviewed": false
+  },
+  "review": {
+    "notes": "No login or machine hardware required. Setups → New setup draft → inspection policy → Approve; Jobs → new run; Run → confirm setup, first-piece review, good pieces and inspection hold; Records → exports. Pro products are not yet configured in App Store Connect.",
+    "contact_complete": false,
+    "demo_access_complete": false,
+    "navigation_path_documented": false,
+    "non_obvious_features_explained": false,
+    "permission_steps_explained": false
+  },
+  "guideline_review": {
+    "source_url": "https://developer.apple.com/app-store/review/guidelines/",
+    "reviewed_on": "2026-09-24",
+    "applicable_ids": [
+      "2.3"
+    ],
+    "family_rationale": {
+      "1": "Replace with feature-specific applicability reasoning",
+      "2": "Replace with feature-specific applicability reasoning",
+      "3": "Replace with feature-specific applicability reasoning",
+      "4": "Replace with feature-specific applicability reasoning",
+      "5": "Replace with feature-specific applicability reasoning"
+    },
+    "dispositions": [
+      {
+        "id": "2.3",
+        "status": "blocked",
+        "evidence": "Replace with actual app-specific evidence"
+      }
+    ]
+  },
+  "compliance_controls": {
+    "app_stability": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "metadata_build_parity": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "metadata_complete_accurate": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "screenshots_authentic_current": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "reviewer_access": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "legal_urls_live": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "privacy_policy_matches_build": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "app_privacy_answers_match_build_and_sdks": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "privacy_manifest_archive_checked": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "required_reason_apis_and_sdk_signatures_checked": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "permissions_just_in_time": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "age_rating_accurate": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "content_rights_confirmed": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "export_compliance_resolved": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "no_private_apis_hidden_features_placeholders": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "accessibility_device_locale_rtl_checked": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "regional_availability_reviewed": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "contact_information_current": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "applicable_guidelines_reviewed": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    }
+  },
+  "aso_controls": {
+    "search_intent_researched": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "name_subtitle_fit_confirmed": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "keyword_field_relevant_deduplicated": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "competitor_trademark_screened": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "category_fit_confirmed": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "description_explains_workflow": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "launch_visual_story": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "icon_small_size_checked": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "native_locale_adaptation": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "search_to_product_page_alignment": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "claims_supported": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    },
+    "post_launch_measurement_ready": {
+      "status": "blocked",
+      "evidence": "Replace with inspectable evidence before changing status"
+    }
+  },
+  "authorization": {
+    "live_submission_authorized": false,
+    "authorization_evidence": ""
+  },
+  "human_review": {
+    "attested": false,
+    "reviewer": "",
+    "evidence": "",
+    "reviewed_on": "2026-09-24"
+  }
+}
