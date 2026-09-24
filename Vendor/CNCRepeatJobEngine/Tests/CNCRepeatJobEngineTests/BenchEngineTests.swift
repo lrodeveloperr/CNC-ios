@@ -553,13 +553,15 @@ final class BenchEngineTests: XCTestCase {
         let encoder = JSONEncoder(); encoder.dateEncodingStrategy = .iso8601
         var json = try XCTUnwrap(JSONSerialization.jsonObject(with: encoder.encode(engine.state)) as? [String: Any])
         json.removeValue(forKey: "inspectionPolicies")
-        var runs = try XCTUnwrap(json["runs"] as? [String: [String: Any]])
-        for key in runs.keys {
-            var entry = try XCTUnwrap(runs[key])
+        // Codable encodes UUID-keyed dictionaries as alternating key/value arrays.
+        var runs = try XCTUnwrap(json["runs"] as? [Any])
+        XCTAssertEqual(runs.count % 2, 0)
+        for index in stride(from: 1, to: runs.count, by: 2) {
+            var entry = try XCTUnwrap(runs[index] as? [String: Any])
             entry.removeValue(forKey: "inspections")
             entry.removeValue(forKey: "pendingInspection")
             entry.removeValue(forKey: "nextInspectionGood")
-            runs[key] = entry
+            runs[index] = entry
         }
         json["runs"] = runs
         let decoder = JSONDecoder(); decoder.dateDecodingStrategy = .iso8601
